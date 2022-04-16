@@ -1,0 +1,21 @@
+import { Component, Input, OnInit } from '@angular/core';
+import { BlogPost } from '../BlogPost';
+
+
+@Component({
+  selector: 'app-post-card',
+  templateUrl: './post-card.component.html',
+  styleUrls: ['./post-card.component.css']
+})
+export class PostCardComponent implements OnInit {
+
+  @Input()
+  postcard: BlogPost={_id:'',title:'',postDate:'',featuredImage:'',
+  post:'',postedBy:'',comments:[],category:'',tags:[],isPrivate:false,
+  views:0};
+  
+  constructor() { }
+
+  ngOnInit(): void {}
+
+}

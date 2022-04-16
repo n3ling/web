@@ -1,0 +1,15 @@
+<div class="post-thumbnail"><a [routerLink]="['/post', postcard._id]"><img src="{{postcard.featuredImage}}" alt="..." class="img-fluid"></a></div>
+    <div class="post-details">
+        <div class="post-meta d-flex justify-content-between">
+        <div class="date meta-last">{{postcard.postDate | date:'mediumDate'}}</div>
+        <div class="category"><a routerLink>{{postcard.category}}</a></div>
+        </div><a [routerLink]="['/post', postcard._id]">
+        <h3 class="h4">{{postcard.title}}</h3></a>
+        <div class="text-muted">{{postcard.post}}</div>
+    <footer class="post-footer d-flex align-items-center"><a routerLink class="author d-flex align-items-center flex-wrap">
+        <div class="avatar"><img src="/assets/img/user.svg" alt="..." class="img-fluid"></div>
+        <div class="title"><span>{{postcard.postedBy}}</span></div></a>
+        <div class="date"><i class="icon-clock"></i>{{postcard.postDate | date:'mediumDate'}}</div>
+        <div class="comments meta-last"><i class="icon-comment"></i>{{postcard.comments.length}}</div>
+    </footer>
+</div>

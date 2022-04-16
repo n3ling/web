@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+      <!-- Latest Posts -->
+      <main class="posts-listing col-lg-8"> 
+        <div class="container">
+          <div class="row">
+            <div class="post col-xl-6" *ngFor="let post of blogPosts">
+              <app-post-card [postcard]="post" class="post col-xl-6" ></app-post-card>
+            </div>
+            <div class="w-100">
+              <app-paging [page]="page" (newPage)="getPage($event)"></app-paging>
+            </div>
+          </div>
+        </div>
+      </main>
+      <aside class="col-lg-4">
+        <!-- Widget [Search Bar Widget]-->
+        <app-widget-search></app-widget-search>
+        <!-- Widget [Latest Posts Widget] -->
+        <app-widget-latest-posts></app-widget-latest-posts>
+        <!-- Widget [Categories Widget]-->
+        <app-widget-categories></app-widget-categories>
+        <!-- Widget [Tags Cloud Widget]-->
+        <app-widget-tags></app-widget-tags>
+      </aside>
+    </div>
+  </div>
+  
